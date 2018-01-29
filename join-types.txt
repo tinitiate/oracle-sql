@@ -1,0 +1,73 @@
+-- >---
+-- >YamlDesc: CONTENT-ARTICLE
+-- >Title: SQL JOIN TYPES
+-- >MetaDescription: SQL Joins Inner Join, Left Join, Right Join, Full Outer Join, Cross Join
+-- >MetaKeywords: SQL Joins Inner Join, Left Join, Right Join, Full Outer Join, Cross Join example code, tutorials
+-- >Author: Venkata Bhattaram / tinitiate.com
+-- >ContentName: sql-join-types
+-- >---
+
+-- ># Join Types in SQL
+-- >* Joins is the means to querying data from multiple tables based on a common 
+-- >  values of common columns between them.
+-- >* Usually the tables share a parent-child relationship, Where in the 
+-- >  Parent Table has the **PRIMARY KEY** and the Child table has the **FOREIGN KEY**
+-- >* There 5 basic types of JOINS
+-- >  * Inner Join
+-- >  * Left Join
+-- >  * Right Join
+-- >  * Full Outer Join
+-- >  * Cross Join
+
+-- >## Data Setup To Demonstrate SQL Join Types
+-- >```
+drop table employee;
+create table employee
+(
+     empid int
+    ,deptid int
+    ,ename varchar2(100)
+    ,salary int
+);
+
+insert into employee values (1,1,'Storm',2000);
+insert into employee values (2,2,'kode',2000);
+insert into employee values (3,3,'Po',2000);
+insert into employee values (4,1,'Vader',2000);
+insert into employee values (5,null,'Kylo',2000);
+
+drop table dept;
+create table dept
+(
+     deptid int
+    ,dname varchar2(100)
+);
+
+insert into dept values (1,'IT');
+insert into dept values (2,'SALES');
+insert into dept values (3,'MKTG');
+insert into dept values (4,'ADMIN');
+--
+commit;
+-- >```   
+    
+-- >## Inner Join
+-- >* Join and Return all matching rows based on the join condition columns.
+
+-- >## Left Join
+-- >* Join and return all of the records in the left table regardless of any 
+-- >  matching rows in the table in the right, Also return Matching Rows from right.
+
+-- >## Right Join
+-- >* Join and return all of the records in the right table regardless of any 
+-- >  matching rows in the table in the right, Also return Matching Rows from left.
+
+-- >## Full Outer Join
+-- >* Join and return all of the records from tables on both sides of the join
+-- >  regardless of any matching rows or non matching rows.
+
+-- >## Cross Join
+-- >* Cross Join also called as Cartesian Product, This is a result of tables in 
+-- >  a from clause without a Join
+-- >>
+-- >![sql join types](join-types.png "sql join types")
