@@ -1,5 +1,5 @@
 -- >---
--- >YamlDesc: DATA-TYPES
+-- >YamlDesc: CONTENT-ARTICLE
 -- >Title: Oracle Datatypes
 -- >MetaDescription: 'Oracle datatypes'
 -- >MetaKeywords: 'Oracle data types int, number, varchar2, clob, blob, example code, tutorials'
